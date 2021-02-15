@@ -8,8 +8,6 @@ OpenSuse Post installation script will install or do following things:
 5. Install and Enable Flatpak (Install Flatpak Skype and Postman Clients)
 6. Install and Configure LAMP Stack(PHP, Apache 2, Mysql)
 
-![Powerlevel10k](
-https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/prompt-styles-high-contrast.png)
 
 ## Installtion
 ```
@@ -21,11 +19,22 @@ sh post-installation-opensuse.sh
 
 ## Customize Terminal
 
-run following commands
+![Terminal](
+https://raw.githubusercontent.com/msaifmumtaz/opensuse-post-installation/master/terminal.png)
+
+open terminal in above mentioned folder and follow the bellow commands.
+
 ```
 cp ./.p10k.zsh ~/
 cp ./.zshrc ~/
 sudo cp ./.p10k.zsh ~/
 sudo cp ./.zshrc ~/
 ```
+if you want to customize run following command
+
+```
+p10k configure
+```
+
+if you have any issue feel free to contact me using [Twitter](https://twitter.com/msaifmumtaz)
 **Thank You**
