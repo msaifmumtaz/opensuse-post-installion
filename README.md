@@ -60,6 +60,41 @@ Now you can enable yaru theme from Gnome tweaks. If Gnome Tweaks not installed r
 ```
 sudo zypper in gnome-tweaks
 ```
+## Force Sudo Lecture
+
+Edit the config file, run the following command:
+```
+sudo visudo
+```
+Add the following line after the initial options to make sudo to start the lecture every time a user uses sudo:
+```
+Defaults        lecture=always
+```
+
+For Customized Message like this follow the following commands:
+
+![Terminal](
+https://raw.githubusercontent.com/msaifmumtaz/opensuse-post-installation/master/sudo_lecture.png)
+
+```
+sudo visudo
+```
+
+add following line after ```Defaults        lecture=always```
+
+```
+Defaults       lecture_file=/etc/sudo_lecture.txt
+```
+
+copy ```sudo_lecture.txt``` file in ```/etc/```
+
+Now run following commands to take effect:
+
+```
+sudo -k
+sudo -i
+```
+Happy Customization :heart_eyes:
 
 if you have any issue feel free to contact me using [Twitter](https://twitter.com/msaifmumtaz)
 
