@@ -78,17 +78,15 @@ sudo flatpak install flathub com.skype.Client
 sudo flatpak install flathub com.getpostman.Postman
 echo "$color Flatpak installation Completed."
 
-# Albert Launcher
-albert="$color Starting alber Installtion"
+# ulauncher Launcher
+albert="$color Starting ulauncher Installtion"
 printf "%*s\n" $(((${#star}+$COLUMNS)/2)) "$star"
 printf "%*s\n" $(((${#albert}+$COLUMNS)/2)) "$albert"
 printf "%*s\n" $(((${#star}+$COLUMNS)/2)) "$star"
-sudo zypper addrepo https://download.opensuse.org/repositories/home:manuelschneid3r/openSUSE_Tumbleweed/home:manuelschneid3r.repo
-sudo zypper refresh
-sudo zypper install albert
+zypper addrepo https://download.opensuse.org/repositories/home:Dead_Mozay/15.4/home:Dead_Mozay.repo
+zypper refresh
+zypper install ulauncher
 
-# Lock PHP8
-sudo zypper addlock php8
 
 # LAMP Installation
 lamp="$color Starting LAMP Installtion"
@@ -102,8 +100,8 @@ sudo systemctl enable apache2
 sudo zypper install mariadb mariadb-client mariadb-tools
 sudo systemctl start mysql
 sudo systemctl enable mysql
-sudo zypper install php7 php7-mysql apache2-mod_php7 php-composer
-sudo a2enmod php7
+sudo zypper install php8 php8-mysql apache2-mod_php8 php-composer
+sudo a2enmod php8
 sudo systemctl restart apache2
 sudo zypper install phpMyAdmin
 sudo systemctl restart apache2
